@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDc-KP-Cxf">
+                                <rect key="frame" x="225" y="450" width="150" height="30"/>
+                                <state key="normal" title="Take photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hacerFoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvx-Xv-NHK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoo-70-Ybh">
+                                <rect key="frame" x="225" y="490" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="KGA-k3-sC0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="WRz-mT-PCC"/>
+                                    <constraint firstAttribute="height" constant="30" id="X6c-Bt-YCv"/>
+                                </constraints>
+                                <state key="normal" title="Select photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seleccionarFoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDx-o4-tqQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bep-2d-pRS">
+                                <rect key="frame" x="225" y="539" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="B9e-B3-hvQ"/>
+                                </constraints>
+                                <state key="normal" title="Upload to server">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="subirImagen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ren-qM-mXd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-7r-cYh">
+                                <rect key="frame" x="0.0" y="20" width="600" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="CnL-Mr-ykJ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CnL-Mr-ykJ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="yDc-KP-Cxf" secondAttribute="centerX" id="0Fy-gB-wlA"/>
+                            <constraint firstItem="Tby-7r-cYh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="89V-xr-dXV"/>
+                            <constraint firstItem="aoo-70-Ybh" firstAttribute="bottom" secondItem="yDc-KP-Cxf" secondAttribute="bottom" constant="40" id="DWl-2Y-AsH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aoo-70-Ybh" secondAttribute="bottom" constant="80" id="Ipu-60-Lji"/>
+                            <constraint firstItem="aoo-70-Ybh" firstAttribute="width" secondItem="yDc-KP-Cxf" secondAttribute="width" id="TJB-6i-mmK"/>
+                            <constraint firstItem="Tby-7r-cYh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZJ1-z7-Zwj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bep-2d-pRS" secondAttribute="bottom" constant="31" id="bqE-xD-zay"/>
+                            <constraint firstAttribute="centerX" secondItem="Tby-7r-cYh" secondAttribute="centerX" id="jBw-uX-5CL"/>
+                            <constraint firstItem="yDc-KP-Cxf" firstAttribute="top" secondItem="Tby-7r-cYh" secondAttribute="bottom" constant="30" id="jei-Go-1a5"/>
+                            <constraint firstItem="bep-2d-pRS" firstAttribute="top" secondItem="aoo-70-Ybh" secondAttribute="bottom" constant="19" id="jfZ-iX-Xd6"/>
+                            <constraint firstItem="bep-2d-pRS" firstAttribute="width" secondItem="aoo-70-Ybh" secondAttribute="width" id="vhR-Or-o1d"/>
+                            <constraint firstAttribute="centerX" secondItem="bep-2d-pRS" secondAttribute="centerX" id="xrt-fB-YA8"/>
+                            <constraint firstAttribute="centerX" secondItem="aoo-70-Ybh" secondAttribute="centerX" id="yqC-Ug-bcK"/>
+                            <constraint firstItem="aoo-70-Ybh" firstAttribute="height" secondItem="yDc-KP-Cxf" secondAttribute="height" id="yxD-Rt-wME"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ipu-60-Lji"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imagen" destination="Tby-7r-cYh" id="sTQ-vh-Oyw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
