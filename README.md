@@ -6,6 +6,6 @@ This example shows how upload an UIImage taken from camera or photo gallery, and
   - [Android client]
   - [iOS client]
 
-[PHP server]:git@github.com:rchampa/php-upload-file-server.git
-[iOS client]:git@github.com:rchampa/ios-uiimage-uploadserver.git
+[PHP server]:https://github.com/rchampa/php-upload-file-server
+[iOS client]:https://github.com/rchampa/ios-uiimage-uploadserver
 [Android client]:https://www.google.es
