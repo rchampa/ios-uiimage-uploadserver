@@ -15,6 +15,7 @@
 		8C7DFDDC1B243212000040EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C7DFDDB1B243212000040EC /* Images.xcassets */; };
 		8C7DFDDF1B243212000040EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7DFDDD1B243212000040EC /* LaunchScreen.xib */; };
 		8C7DFDEB1B243212000040EC /* CameraAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7DFDEA1B243212000040EC /* CameraAppTests.m */; };
+		8C7DFDFA1B25062A000040EC /* NSMutableData+Multipart.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7DFDF91B25062A000040EC /* NSMutableData+Multipart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		8C7DFDE41B243212000040EC /* CameraAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7DFDE91B243212000040EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C7DFDEA1B243212000040EC /* CameraAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraAppTests.m; sourceTree = "<group>"; };
+		8C7DFDF81B25062A000040EC /* NSMutableData+Multipart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableData+Multipart.h"; sourceTree = "<group>"; };
+		8C7DFDF91B25062A000040EC /* NSMutableData+Multipart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableData+Multipart.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				8C7DFDDB1B243212000040EC /* Images.xcassets */,
 				8C7DFDDD1B243212000040EC /* LaunchScreen.xib */,
 				8C7DFDD21B243212000040EC /* CameraApp.xcdatamodeld */,
+				8C7DFDF81B25062A000040EC /* NSMutableData+Multipart.h */,
+				8C7DFDF91B25062A000040EC /* NSMutableData+Multipart.m */,
 				8C7DFDCB1B243212000040EC /* Supporting Files */,
 			);
 			path = CameraApp;
@@ -222,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C7DFDFA1B25062A000040EC /* NSMutableData+Multipart.m in Sources */,
 				8C7DFDD41B243212000040EC /* CameraApp.xcdatamodeld in Sources */,
 				8C7DFDD11B243212000040EC /* AppDelegate.m in Sources */,
 				8C7DFDD71B243212000040EC /* ViewController.m in Sources */,
@@ -422,6 +428,7 @@
 				8C7DFDF01B243212000040EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C7DFDF11B243212000040EC /* Build configuration list for PBXNativeTarget "CameraAppTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +437,7 @@
 				8C7DFDF31B243212000040EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

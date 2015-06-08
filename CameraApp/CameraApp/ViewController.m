@@ -100,11 +100,10 @@
     [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
     
     NSMutableData *body = [NSMutableData data];
-    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[[NSString stringWithString:[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"myFile\"; filename=\"%@\"\r\n", @"imagen.png"]] dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[[NSString stringWithString:@"Content-Type: application/octet-stream\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[NSData dataWithData:imageData]];
-    [body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body initMultipart];
+    [body addPart:@"myFile" withFileName:@"imagen.png" withNSData:imageData];
+    [body addPart:@"myName" withValue:@"Ricardo"];
+    [body writeLastBoundary];
     [request setHTTPBody:body];
     
     NSURLResponse* response = nil;
