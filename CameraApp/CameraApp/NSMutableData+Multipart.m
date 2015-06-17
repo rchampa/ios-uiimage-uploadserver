@@ -15,13 +15,17 @@ BOOL isSetLast;
 BOOL isSetFirst;
 
 - (void)initMultipart{
-    boundary = @"---------------------------14737809831466499882746641449";
+    //boundary = @"---------------------------14737809831466499882746641449";
+    boundary = @"---------------------------myIOSboundary";
     isSetLast = NO;
     isSetFirst = NO;
 }
 
 - (void) writeFirstBoundaryIfNeeds{
     if(!isSetFirst){
+        [self appendData:[[NSString stringWithFormat:@"--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    }
+    else{
         [self appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     }
     isSetFirst = true;
@@ -29,7 +33,7 @@ BOOL isSetFirst;
 
 - (void) writeLastBoundary{
     if(isSetLast){
-        return ;
+        return;
     }
     [self appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     isSetLast = true;
@@ -47,7 +51,7 @@ BOOL isSetFirst;
     //[self appendData:[[NSString stringWithString:[NSString stringWithFormat:@"%@",value]] dataUsingEncoding:NSUTF8StringEncoding]];
     NSData* data = [value dataUsingEncoding:NSUTF8StringEncoding];
     [self appendData:[NSData dataWithData:data]];
-    [self appendData:[[NSString stringWithString:[NSString stringWithFormat:@"\r\n--%@\r\n",boundary]] dataUsingEncoding:NSUTF8StringEncoding]];
+    //[self appendData:[[NSString stringWithString:[NSString stringWithFormat:@"\r\n--%@\r\n",boundary]] dataUsingEncoding:NSUTF8StringEncoding]];
 
 }
 
@@ -58,7 +62,7 @@ BOOL isSetFirst;
     [self appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
     [self appendData:[NSData dataWithData:data]];
     //[self appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-    [self appendData:[[NSString stringWithString:[NSString stringWithFormat:@"\r\n--%@\r\n",boundary]] dataUsingEncoding:NSUTF8StringEncoding]];
+    //[self appendData:[[NSString stringWithString:[NSString stringWithFormat:@"\r\n--%@\r\n",boundary]] dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
 @end
