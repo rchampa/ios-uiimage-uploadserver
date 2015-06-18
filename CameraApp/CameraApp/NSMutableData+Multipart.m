@@ -14,9 +14,8 @@ NSString *boundary;
 BOOL isSetLast;
 BOOL isSetFirst;
 
-- (void)initMultipart{
-    boundary = @"---------------------------14737809831466499882746641449";
-    //boundary = @"14737809831466499882746641449";
+- (void)initMultipart: (NSString*) content_type_boundary{
+    boundary = content_type_boundary;
     isSetLast = NO;
     isSetFirst = NO;
 }

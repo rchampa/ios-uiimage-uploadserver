@@ -95,15 +95,15 @@
     [request setURL:[NSURL URLWithString:urlString]];
     [request setHTTPMethod:@"POST"];
     
-    NSString *boundary = @"---------------------------14737809831466499882746641449";
+    NSString *boundary = @"myIOSboundary";
     NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
     [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
     
     NSMutableData *body = [NSMutableData data];
-    [body initMultipart];
+    [body initMultipart:boundary];
+    [body addPart:@"id" withValue:@"23"];
     [body addPart:@"myFile" withFileName:@"imagen.png" withNSData:imageData];
     [body addPart:@"comentario" withValue:@"un comentario"];
-    [body addPart:@"id" withValue:@"23"];
     [body writeLastBoundary];
     [request setHTTPBody:body];
     

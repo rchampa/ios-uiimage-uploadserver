@@ -10,7 +10,7 @@
 
 @interface NSMutableData (Multipart)
 
-- (void)initMultipart;
+- (void)initMultipart:(NSString*) content_type_boundary;
 - (void) addPart:(NSString*) key withValue:(NSString*) value;
 - (void) addPart:(NSString*) key withFileName:(NSString*) fileName withNSData:(NSData*) data;
 - (void) writeLastBoundary;
