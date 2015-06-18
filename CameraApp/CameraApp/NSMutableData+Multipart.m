@@ -15,8 +15,8 @@ BOOL isSetLast;
 BOOL isSetFirst;
 
 - (void)initMultipart{
-    //boundary = @"---------------------------14737809831466499882746641449";
-    boundary = @"---------------------------myIOSboundary";
+    boundary = @"---------------------------14737809831466499882746641449";
+    //boundary = @"14737809831466499882746641449";
     isSetLast = NO;
     isSetFirst = NO;
 }

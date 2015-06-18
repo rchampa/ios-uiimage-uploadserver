@@ -102,7 +102,8 @@
     NSMutableData *body = [NSMutableData data];
     [body initMultipart];
     [body addPart:@"myFile" withFileName:@"imagen.png" withNSData:imageData];
-    [body addPart:@"myName" withValue:@"Ricardo"];
+    [body addPart:@"comentario" withValue:@"un comentario"];
+    [body addPart:@"id" withValue:@"23"];
     [body writeLastBoundary];
     [request setHTTPBody:body];
     
